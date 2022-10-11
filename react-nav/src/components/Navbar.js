@@ -2,15 +2,20 @@ import React from 'react'
 import './Navbar.css'
 
 function Navbar() {
+    const [isOpen, setIsOpen] = React.useState(false);
+    const toggle = () => {
+        setIsOpen(!isOpen)
+    }
+
   return (
     <header>
-      <div className="logo">react nav.</div>
-      <div className="hamburger">
+      <div className="logo">React nav.</div>
+      <div onClick={toggle} className="hamburger">
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>
       </div>
-      <nav className="navbar">
+      <nav className={`navbar ${isOpen ? `navbar-active`: ``}`}>
         <ul>
             <li>Home</li>
             <li>Pricing</li>

@@ -1,4 +1,4 @@
-header{
+.header-1{
     background-color: #111b11;
     color: #fbfbfb;
     display: flex;
@@ -41,7 +41,7 @@ header{
     body{
         overflow-x: hidden;
     }
-    header{
+    .header-1{
         display: flex;
         justify-content: space-between;
         padding: 0 1.5em;
